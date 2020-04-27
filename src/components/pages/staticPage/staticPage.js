@@ -7,10 +7,12 @@ const staticPage = (props) => {
 			{props.page.sections.map(
 				section => (
 					(!section.archived) ? 
-						<StaticSection body={section.body}
-													header={section.header} 
-													className={section.className}
-													key={Math.random()}/> : ''
+						<StaticSection body = {section.body}
+													linkCopy = {section.linkCopy}
+													url = {section.url}
+													header = {section.header} 
+													className = {section.className}
+													key = {Math.random()}/> : ''
 				)
 			)}
 		</div>

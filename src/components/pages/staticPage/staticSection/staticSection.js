@@ -9,6 +9,7 @@ const staticSection = (props) => {
 			{(props.body === '') ? '' :
 				<article className={props.className} >
 					{props.body.split('|').map( (p,i) => <p key={i}>{p}</p>)}
+					{(props.linkCopy) ? <p><a href={props.url}>{props.linkCopy}</a></p> : null}
 				</article>
 			}
 		</section>
